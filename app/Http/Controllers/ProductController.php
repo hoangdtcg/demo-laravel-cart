@@ -16,7 +16,8 @@ class ProductController extends Controller
 
     public function cart()
     {
-        return view('cart');
+//        dd(1);
+        return view('frontend.product.cart');
     }
     public function addToCart($id)
     {

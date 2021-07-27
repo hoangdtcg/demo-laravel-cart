@@ -15,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('products')->group(function (){
-    Route::get('/', [ProductController::class,'index']);
-    Route::get('cart', [ProductController::class,'cart']);
-    Route::get('add-to-cart/{id}', [ProductController::class,'addToCart']);
+    Route::get('/', [ProductController::class,'index'])->name('products.index');
+
 });
+Route::get('cart', [ProductController::class,'cart'])->name('cart');
+Route::get('add-to-cart/{id}', [ProductController::class,'addToCart'])->name('addToCart');
 
 
